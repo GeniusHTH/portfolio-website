@@ -565,13 +565,13 @@ body.dark-mode .intro-flex {
 body {
     background: 
         linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.95)),
-        url('Me.avif') repeat;
+        url('pictures/Me.avif') repeat;
 }
 
 body.dark-mode {
     background: 
         linear-gradient(rgba(30, 30, 30, 0.95), rgba(30, 30, 30, 0.95)),
-        url('Me.avif') repeat;
+        url('pictures/Me.avif') repeat;
 }
 #skills, 
 #contact,
