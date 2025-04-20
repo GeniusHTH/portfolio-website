@@ -1,0 +1,684 @@
+/* ===== GENERAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+html {
+    scroll-behavior: smooth; /* Ensures smooth scrolling */
+}
+/* Prevents scroll anchoring in Chrome */
+/* ===== DARK MODE STYLES ===== */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+    background-color: #121212;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in;
+    transition: transform 0.3s ease;
+}
+header:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ===== DARK MODE TOGGLE BUTTON ===== */
+#dark-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 100;
+}
+
+#dark-mode-btn:hover {
+    background-color: #666;
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+}
+
+/* ===== SECTION COMMON STYLES ===== */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* ===== ABOUT SECTION ===== */
+#about {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    text-align: left;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-in;
+}
+
+.about-flex:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-flex img:hover {
+    transform: scale(1.05);
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 600px;
+}
+
+body.dark-mode .about-text h2,
+body.dark-mode .about-text p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .about-flex img {
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ===== ABOUT SECTION DARK MODE ===== */
+body.dark-mode .about-flex {
+    background-color: #252525; /* Nice medium gray */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Optional: Add a subtle border for more separation */
+body.dark-mode .about-flex {
+    border: 1px solid #3d3d3d;
+}
+
+/* ===== SKILLS SECTION ===== */
+#skills {
+    background-color: #f8f9fa;
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    animation: fadeIn 1s ease-in;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.skill-box {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(59, 59, 59, 0.201);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.skill-box:hover {
+    transform: scale(1.05); /* Apply zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skill-box p {
+    color: #666;
+}
+/* Responsive design for skill boxes */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+/* Dark mode styles for skills section */
+body.dark-mode #skills {
+    background-color: #12121236;
+}
+
+body.dark-mode .skill-box {
+    background-color: #252525; /* Nice medium gray */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.11);
+    
+}
+
+body.dark-mode .skill-box h3 {
+    color: #fff;
+}
+
+body.dark-mode .skill-box p {
+    color: #ccc;
+}
+/* Dark mode hover */
+body.dark-mode .skill-box:hover {
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* ===== PROJECTS SECTION ===== */
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-card p {
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.project-card a {
+    color: #0078ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+body.dark-mode .project-card {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .project-card h3,
+body.dark-mode .project-card a {
+    color: #fff;
+}
+
+body.dark-mode .project-card p {
+    color: #ccc;
+}
+
+/* ===== CONTACT SECTION ===== */
+#contact {
+    background-color: #f5f5f5;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contact button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #45a049;
+}
+
+body.dark-mode #contact {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode #contact input,
+body.dark-mode #contact textarea {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #444;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+body.dark-mode footer {
+    background-color: #000;
+}
+
+/* Intro Section */
+#intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.intro-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    text-align: left;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-in;
+}
+.intro-flex:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+/* Profile Image Styles */
+.intro-image {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  background-color: #f0f0f0; /* Fallback color */
+}
+/* Responsive image styles */
+@media (max-width: 768px) {
+  .intro-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+/* Responsive image styles for smaller screens */
+@media (max-width: 480px) {
+  .intro-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+.intro-image:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode adjustment */
+body.dark-mode .intro-image {
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+/* Dark mode adjustment for hover effect */
+body.dark-mode .intro-image:hover {
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+body.dark-mode .intro-flex {
+    background-color: #252525; /* Nice medium gray */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .intro-flex {
+    border: 1px solid #3d3d3d;
+}
+/* Intro Text Styles */
+#typed-intro {
+  font-size: 4rem;
+  font-weight: bold;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #4CAF50;
+  width: 0;
+}
+/* ===== ANIMATIONS ===== */
+
+/* ===== Fade-In Animation ===== */
+/* This animation is used to create a smooth fade-in effect with a subtle upward motion.
+   It is applied to various sections such as #skills, #projects, #contact, and .project-card
+   to enhance the user experience with a visually appealing entrance effect. */
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        /* transform: translateY(20px); Start slightly lower */
+        /*i cant make it work with translateY(20px)*/
+    }
+    to { 
+        opacity: 1;
+        /*transform: translateY(0);  End at original position */
+        /*i cant make it work with translateY(0)*/
+    }
+}
+
+/* Animate the Skills section container AND its children */
+#skills,
+#skills h2,
+#projects h2,
+#skills .skills-container,
+#skills .skill-box {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0; /* Start hidden */
+}
+#contact,
+#contact h2 {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0; /* Start hidden */
+}
+
+/* Stagger animations for the skills section header and container */
+
+/* Stagger animations for skill boxes */
+#skills .skill-box:nth-child(1) { animation-delay: 0.2s; }
+#skills .skill-box:nth-child(2) { animation-delay: 0.4s; }
+#skills .skill-box:nth-child(3) { animation-delay: 0.4s; }
+#skills .skill-box:nth-child(4) { animation-delay: 0.5s; }
+#skills .skill-box:nth-child(4) { animation-delay: 0.6s; }
+#skills .skill-box:nth-child(5) { animation-delay: 0.7s; }
+/* Animate Experience container AND items */
+#experience,
+#experience h2,
+
+
+/* Project cards animation */
+.project-card {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.3s; /* Stagger after header */
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #4CAF50 }
+}
+  
+#typed-about-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #4CAF50;
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+  /* Responsive design for the typing effect */
+@media (max-width: 768px) {
+    #typed-about-text {
+    white-space: normal;
+    animation: none;
+    border-right: none;
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 30px 15px;
+    }
+
+    #dark-mode-btn {
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+/*Adding a Background picture to the code*/
+body {
+    background: 
+        linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.95)),
+        url('Me.avif') repeat;
+}
+
+body.dark-mode {
+    background: 
+        linear-gradient(rgba(30, 30, 30, 0.95), rgba(30, 30, 30, 0.95)),
+        url('Me.avif') repeat;
+}
+#skills, 
+#contact,
+body.dark-mode #skills,
+body.dark-mode #contact {
+    background-color: transparent !important; /* Remove solid backgrounds */
+    box-shadow: none !important; /* Remove any shadows */
+}
+body.dark-mode #contact {
+    background-color: transparent;
+}
+/* Contact form status message */
+/* 
+   #form-status: This element is used to display the status of the contact form submission.
+   It can show success or error messages based on the form submission result.
+*/
+#form-status {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Success state */
+#form-status[data-status="success"] {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Error state */
+#form-status[data-status="error"] {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+/*Styling for the Experience section*/
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.experience-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Bring hovered item above others */
+}
+
+.experience-subsection h4 {
+  margin-top: 1rem;
+  color: #333;
+}
+
+.year-tag {
+  font-size: 0.9rem;
+  color: #545353;
+}
+.experience-card p, .experience-card ul {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.experience-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+/* Responsive design for experience section */
+@media (max-width: 768px) {
+    .experience-container {
+        padding: 1rem;
+    }
+
+    .experience-card {
+        padding: 1rem;
+    }
+}
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .experience-container {
+        padding: 0.5rem;
+    }
+
+    .experience-card {
+        padding: 0.5rem;
+    }
+}
+/* Experincee section dark mode */
+/* Experience Section */
+body.dark-mode .experience-card {
+    background-color: #1e1e1e; /* Dark background for experience card */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Additional Specific Styles */
+body.dark-mode .experience-card h3,
+body.dark-mode .experience-card h4 {
+    color: #ffffff; /* Ensure headings are white */
+}
+
+body.dark-mode .experience-card p,
+body.dark-mode .experience-card ul {
+    color: #cccccc; /* Slightly lighter text for paragraphs */
+}

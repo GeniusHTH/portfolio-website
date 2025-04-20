@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Austin Godsmark</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button id="dark-mode-btn">Toggle Dark Mode</button>
+
+    <section id="intro">
+        <div class="intro-flex">
+          <img src="Me.jpg" alt="Austin" class="intro-image">
+          <div class="intro-text">
+            <h3><span id="typed-about-text">Hello! I'm Austin, a Computer Science Student, Front End Dev, Gamer, AI Enthusiast, and Freelancer ...</span></h3> <br>
+          </div>
+        </div>
+      </section>
+
+    <section id="about">
+        <div class="about-flex">
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>"I’m a passionate and self-driven individual with a strong interest in artificial intelligence, programming, and digital innovation. I currently study at Kwame Nkrumah University of Science and Technology, where I am constantly building my knowledge in technology and business. I have a keen eye for problem-solving, a natural curiosity for how systems work, and a growing portfolio in both personal and academic projects."</p> <br>
+            <p>"I have a strong foundation in web development, AI, and Cyber Security, and I’m always eager to learn more. I enjoy collaborating with others and sharing ideas, whether it’s through gaming or working on projects. I believe that technology can be a powerful tool for positive change, and I’m excited to be part of that journey."</p> <br>
+            <p>"Beyond school, I aspire to contribute to the advancement of AI and become a skilled freelancer in tech and creative fields. I work well independently and thrive in collaborative environments where I can learn, grow, and make meaningful impact. I’m committed to constant self-improvement, and I’m actively developing both my technical and soft skills to become a valuable asset in any forward-thinking team."</p>
+          </div>
+        </div>
+    </section>
+      
+    <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <div class="skills-container">
+                        
+            <div class="skill-box">
+              <h3>Web Development</h3>
+              <p>HTML, CSS, JavaScript, React</p>
+           </div>
+           <div class="skill-box">
+                <h3>Desktop &amp; Web App Development</h3>
+                <p> React js, Node.js, SQL, Python (Tkinter, PyQt)</p> 
+         </div>
+           <div class="skill-box">
+                <h3>AI &amp; Machine Learning</h3>
+                <p>Python, TensorFlow, NLP, Deep Learning</p>
+           </div>
+           <div class="skill-box">
+                <h3>Gaming &amp; Strategy</h3>
+                <p>Apex Legends, Call of Duty, Multiplayer Coordination</p> 
+           </div>
+            <div class="skill-box">
+                <h3>Problem-Solving &amp; Critical Thinking.</h3>
+                <p>Client Communication, Project Management</p>
+            </div>
+        </div>
+    </section>
+     
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+      
+        <div class="experience-container">
+      
+          <div class="experience-card">
+            <h3>Freelance Developer <span class="year-tag">(Since 2024)</span></h3>
+            <p>Working on web development, AI, and freelancing projects.</p>
+      
+            <div class="experience-subsection">
+              <h4>Role &amp; Responsibilities</h4>
+              <p>As a freelance developer, I specialize in creating responsive web applications using modern technologies such as React, Node.js, and Python. I collaborate with clients to understand their needs and deliver tailored solutions.</p>
+            </div>
+      
+            <div class="experience-subsection">
+              <h4>Notable Projects</h4>
+              <ul>
+                <strong>AI Chatbot Project:</strong> Developed a chatbot utilizing NLP to enhance user engagement for a gaming website. Improved user interaction by 30%. <br>
+                <strong>Portfolio Website:</strong> Designed and implemented my personal portfolio site to showcase my work, utilizing HTML, CSS, and JavaScript. <br>
+                <strong>Gaming Blog:</strong> Created a gaming blog platform for community engagement and article sharing.
+              </ul>
+            </div>
+      
+            <div class="experience-subsection">
+              <h4>Skills Utilized</h4>
+              <p>HTML, CSS, JavaScript, React, Node.js, Python, TensorFlow. Strong problem-solving abilities and project management experience.</p>
+            </div>
+      
+            <div class="experience-subsection">
+              <h4>Achievements</h4>
+              <p>Completed projects on time with positive feedback. Maintained a 5-star rating on freelance platforms.</p>
+            </div>
+      
+            <div class="experience-subsection">
+              <h4>Collaboration</h4>
+              <p>Worked with designers and developers, using Git and Slack for version control and team communication.</p>
+            </div>
+          </div>
+      
+        </div>
+    </section>
+      
+      
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+           <div class="project-card">
+              <h3>AI Chatbot Project</h3>
+              <p>A chatbot built using NLP to answer user queries efficiently.</p>
+           </div>
+
+           <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio to showcase my skills, experience, and projects.</p>
+            <a href="https://github.com/AustinGodsmark/portfolio" target="_blank">View Project</a>
+         </div>
+         
+         <div class="project-card">
+            <h3>Gaming Blog</h3>
+            <p>A blog dedicated to game reviews, tips, and news, with a focus on strategy and multiplayer games.</p>
+            <a href="https://gamingblog.com" target="_blank">View Project</a>
+         </div>
+         
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/manekayv" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <!-- Honeypot field for spam prevention -->
+            <input type="text" name="_gotcha" style="display:none;">
+            <button type="submit">Send Message</button>
+          </form>
+          
+          <!-- Success/Error Messages (hidden by default) -->
+          <div id="form-status" style="display:none;"></div>
+    </section>
+      
+     
+    <footer>
+        <p>© 2025 Austin Godsmark. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
