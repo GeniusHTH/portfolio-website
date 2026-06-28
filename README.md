@@ -32,8 +32,7 @@ Projects section highlights some of the things I’ve built so far — both solo
 
 ## 📁 How to Run
 
-1. Clone the repository: https://github.com/GeniusHTH/portfolio-website.git
-2. Open `index.html` in your favorite browser.
+ Click here - https://geniushth.github.io/portfolio-website/
 
 ---
 
