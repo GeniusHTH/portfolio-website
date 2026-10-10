@@ -1,164 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/ favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/ favicon-16x16.png">
-    <link rel="manifest" href="favicon_io/site.webmanifest">
-    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
-    <title>Austin's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Godsmark | Frontend Web Dev</title>
+<meta name="description" content="Godsmark, a Computer Science graduate building web frontends and an addiction recovery app called UrgeGuard.">
+<style>
+:root{--bg:#fafaf8;--card:#fff;--text:#1c1c1a;--muted:#62625c;--line:#e4e4de;--accent:#2f6fed}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1115;--card:#171a21;--text:#ececea;--muted:#9a9ea8;--line:#262a33;--accent:#6ea1ff}}
+:root[data-theme="dark"]{--bg:#0f1115;--card:#171a21;--text:#ececea;--muted:#9a9ea8;--line:#262a33;--accent:#6ea1ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav{display:flex;align-items:center;gap:16px;padding:12px 20px;max-width:760px;margin:0 auto;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--muted);text-decoration:none;font-size:15px}
+nav a:hover{color:var(--text)}
+nav .brand{color:var(--text);font-weight:700;margin-right:auto}
+button{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:5px 10px;cursor:pointer;font:inherit;font-size:14px}
+.hero{padding:56px 0 24px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.hero img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+h1{font-size:clamp(30px,6vw,42px);line-height:1.15;margin:0 0 8px}
+.lead{color:var(--muted);margin:0}
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{font-size:22px;margin:0 0 14px}
+p{margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.card h3{margin:0 0 6px;font-size:18px}
+.tag{display:inline-block;font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 9px;margin:6px 6px 0 0}
+.featured{border-color:var(--accent)}
+.skills{display:grid;gap:12px}
+.skills div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.skills b{display:block}
+.skills span{color:var(--muted);font-size:15px}
+ul{padding-left:20px;margin:0}
+li{margin-bottom:8px}
+.links{display:flex;flex-wrap:wrap;gap:10px 20px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+</style>
 </head>
 <body>
-    <header class="main-header">
-        <h1>Austin Godsmark</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <button id="dark-mode-btn">Toggle Dark Mode</button>
+<header>
+<nav>
+<span class="brand">Godsmark</span>
+<a href="#about">About</a><a href="#urgeguard">UrgeGuard</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+<button id="theme" type="button" aria-label="Toggle dark mode">Theme</button>
+</nav>
+</header>
 
-    <section id="intro">
-        <div class="intro-flex">
-          <img src="pictures/Me.jpg" alt="Austin" class="intro-image">
-          <div class="intro-text">
-            <h3><span id="typed-about-text">Hello! I'm Austin, a Computer Science Student, Front End Dev, Gamer, AI Enthusiast, and Freelancer ...</span></h3> <br>
-          </div>
-        </div>
-      </section>
+<main class="wrap">
+<div class="hero">
+<img src="pictures/Me.jpg" alt="Photo of Godsmark" onerror="this.style.display='none'">
+<div>
+<h1>Hey, I'm Godsmark.</h1>
+<p class="lead">Frontend web dev. Cybersecurity and ML learner. Building UrgeGuard.</p>
+</div>
+</div>
 
-    <section id="about">
-        <div class="about-flex">
-          <div class="about-text">
-            <h2>About Me</h2>
-            <p>"I’m a passionate and self-driven individual with a strong interest in artificial intelligence, programming, and digital innovation. I currently study at Kwame Nkrumah University of Science and Technology, where I am constantly building my knowledge in technology and business. I have a keen eye for problem-solving, a natural curiosity for how systems work, and a growing portfolio in both personal and academic projects."</p> <br>
-            <p>"I have a strong foundation in web development, AI, and Cyber Security, and I’m always eager to learn more. I enjoy collaborating with others and sharing ideas, whether it’s through gaming or working on projects. I believe that technology can be a powerful tool for positive change, and I’m excited to be part of that journey."</p> <br>
-            <p>"Beyond school, I aspire to contribute to the advancement of AI and become a skilled freelancer in tech and creative fields. I work well independently and thrive in collaborative environments where I can learn, grow, and make meaningful impact. I’m committed to constant self-improvement, and I’m actively developing both my technical and soft skills to become a valuable asset in any forward-thinking team."</p>
-          </div>
-        </div>
-    </section>
-      
-    <section id="skills" class="fade-in">
-        <h2>Skills</h2>
-        <div class="skills-container">
-                        
-            <div class="skill-box">
-              <h3>Web Development</h3>
-              <p>HTML, CSS, JavaScript, React</p>
-           </div>
-           <div class="skill-box">
-                <h3>Desktop &amp; Web App Development</h3>
-                <p> React js, Node.js, SQL, Python (Tkinter, PyQt)</p> 
-         </div>
-           <div class="skill-box">
-                <h3>AI &amp; Machine Learning</h3>
-                <p>Python, TensorFlow, NLP, Deep Learning</p>
-           </div>
-           <div class="skill-box">
-                <h3>Gaming &amp; Strategy</h3>
-                <p>Apex Legends, Call of Duty, Multiplayer Coordination</p> 
-           </div>
-            <div class="skill-box">
-                <h3>Problem-Solving &amp; Critical Thinking.</h3>
-                <p>Client Communication, Project Management</p>
-            </div>
-        </div>
-    </section>
-     
-    <section id="experience">
-        <h2 class="section-title">Experience</h2>
-      
-        <div class="experience-container">
-      
-          <div class="experience-card">
-            <h3>Freelance Developer <span class="year-tag">(Since 2024)</span></h3>
-            <p>Working on web development, AI, and freelancing projects.</p>
-      
-            <div class="experience-subsection">
-              <h4>Role &amp; Responsibilities</h4>
-              <p>As a freelance developer, I specialize in creating responsive web applications using modern technologies such as React, Node.js, and Python. I collaborate with clients to understand their needs and deliver tailored solutions.</p>
-            </div>
-      
-            <div class="experience-subsection">
-              <h4>Notable Projects</h4>
-              <ul>
-                <strong>AI Chatbot Project:</strong> Developed a chatbot utilizing NLP to enhance user engagement for a gaming website. Improved user interaction by 30%. <br>
-                <strong>Portfolio Website:</strong> Designed and implemented my personal portfolio site to showcase my work, utilizing HTML, CSS, and JavaScript. <br>
-                <strong>Gaming Blog:</strong> Created a gaming blog platform for community engagement and article sharing.
-              </ul>
-            </div>
-      
-            <div class="experience-subsection">
-              <h4>Skills Utilized</h4>
-              <p>HTML, CSS, JavaScript, React, Node.js, Python, TensorFlow. Strong problem-solving abilities and project management experience.</p>
-            </div>
-      
-            <div class="experience-subsection">
-              <h4>Achievements</h4>
-              <p>Completed projects on time with positive feedback. Maintained a 5-star rating on freelance platforms.</p>
-            </div>
-      
-            <div class="experience-subsection">
-              <h4>Collaboration</h4>
-              <p>Worked with designers and developers, using Git and Slack for version control and team communication.</p>
-            </div>
-          </div>
-      
-        </div>
-    </section>
-      
-      
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-container">
-           <div class="project-card">
-              <h3>AI Chatbot Project</h3>
-              <p>A chatbot built using NLP to answer user queries efficiently.</p>
-           </div>
+<section id="about">
+<h2>About me</h2>
+<p>I'm a Computer Science graduate from KNUST in Ghana. I build web frontends, I like breaking into systems (legally, on HackTheBox), and I'm slowly getting better at both.</p>
+<p>I'm early in my career, so most of what's here is student work and side projects. I'd rather show you real things I made than a list of buzzwords.</p>
+</section>
 
-           <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>A personal portfolio to showcase my skills, experience, and projects.</p>
-            <a href="https://github.com/GeniusHTH/portfolio-website/tree/main" target="_blank">View Project</a>
-         </div>
-         
-         <div class="project-card">
-            <h3>Gaming Blog</h3>
-            <p>A blog dedicated to game reviews, tips, and news, with a focus on strategy and multiplayer games.</p>
-         </div>
-         
-        </div>
-    </section>
+<section id="urgeguard">
+<h2>What I'm working on</h2>
+<div class="card featured">
+<h3>UrgeGuard</h3>
+<p>A mobile app for people recovering from addiction. It's a panic button that doesn't wait for you to be in the right state of mind to press it: it reads signals from a wearable to notice when an urge might be building, walks you through a breathing exercise, and can alert someone you trust.</p>
+<p>I went through an addiction phase myself, and I know how hard it is to stop. I built UrgeGuard to help me stay on track, and to make that kind of help easy to reach for anyone else who needs it.</p>
+<span class="tag">React Native</span><span class="tag">Firebase</span><span class="tag">Android Accessibility Services</span>
+<p style="margin-top:12px">Still a work in progress, and the rough edges are real. <a href="https://github.com/GeniusHTH/UrgeGuard">See the code on GitHub</a>.</p>
+</div>
+</section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/manekayv" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <!-- Honeypot field for spam prevention -->
-            <input type="text" name="_gotcha" style="display:none;">
-            <button type="submit">Send Message</button>
-          </form>
-          
-          <!-- Success/Error Messages (hidden by default) -->
-          <div id="form-status" style="display:none;"></div>
-    </section>
-      
-     
-    <footer>
-        <p>© 2025 Austin Godsmark. All Rights Reserved.</p>
-    </footer>
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><b>Frontend web</b><span>HTML, CSS, JavaScript, React. This is where I'm strongest.</span></div>
+<div><b>Mobile</b><span>React Native, through UrgeGuard.</span></div>
+<div><b>Python</b><span>Small command-line tools and automation scripts.</span></div>
+<div><b>Security</b><span>HackTheBox and CTF challenges. I'm a learner here, not an expert.</span></div>
+<div><b>Machine learning</b><span>Fundamentals so far.</span></div>
+<div><b>Video editing</b><span>CapCut and After Effects.</span></div>
+</div>
+</section>
 
-    <script src="script.js"></script>
+<section id="projects">
+<h2>Projects</h2>
+<div class="card">
+<h3><a href="https://github.com/GeniusHTH/UrgeGuard">UrgeGuard</a></h3>
+<p>The addiction recovery app described above. My final year project.</p>
+<span class="tag">React Native</span><span class="tag">Firebase</span>
+</div>
+<div class="card">
+<h3><a href="https://github.com/GeniusHTH/Calc">Calc</a></h3>
+<p>A command-line calculator in Python with an ASCII art interface and a built-in help menu.</p>
+<span class="tag">Python</span>
+</div>
+<div class="card">
+<h3><a href="https://github.com/GeniusHTH/YoutubeDownloder.py">YouTube Downloader</a></h3>
+<p>A Python script that downloads a YouTube video from a link. One of my first useful scripts.</p>
+<span class="tag">Python</span>
+</div>
+<div class="card">
+<h3><a href="https://github.com/GeniusHTH/portfolio-website">This site</a></h3>
+<p>My portfolio, rebuilt in plain HTML and CSS with a dark mode.</p>
+<span class="tag">HTML</span><span class="tag">CSS</span>
+</div>
+</section>
+
+<section id="how">
+<h2>How I like to work</h2>
+<ul>
+<li>I'd rather ship something small that works than plan something big that doesn't exist.</li>
+<li>I break things on purpose to understand them, and I write down what I learned.</li>
+<li>I ask questions early. Being stuck quietly for three days helps nobody.</li>
+<li>Security is part of the design from the start, especially for an app people trust with something this personal.</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>I'm open to junior frontend roles and internships. If you're building something and want to talk about it, message me.</p>
+<div class="links">
+<a href="mailto:Godsmarkaustin68@gmail.com">Godsmarkaustin68@gmail.com</a>
+<a href="https://github.com/GeniusHTH">GitHub</a>
+<a href="https://x.com/GeniusHTH">X (@GeniusHTH)</a>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">&copy; 2026 Godsmark</div>
+</footer>
+
+<script>
+(function(){
+var root=document.documentElement,btn=document.getElementById('theme');
+try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
+btn.addEventListener('click',function(){
+var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+var next=dark?'light':'dark';
+root.setAttribute('data-theme',next);
+try{localStorage.setItem('theme',next);}catch(e){}
+});
+})();
+</script>
 </body>
 </html>
